@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- extends watching group to include *.razor files -->
+    <Watch Include="**\*.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Watch Remove="Components\ToDo.razor" />
+    <Watch Remove="Pages\ToDoPage.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+</Project>

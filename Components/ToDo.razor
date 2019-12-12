@@ -1,0 +1,24 @@
+﻿@inherits ToDoComponentController
+
+<div>
+    <ul>
+        @foreach (var item in GetItems())
+        {
+            <li>@item</li>
+        }
+    </ul>
+
+    <div>
+        Item you have typed: @ItemInput    
+    </div>
+
+    <input @bind="ItemInput" />
+
+    <button @onclick="UpdateList">Add</button>
+
+    @if (Items.Count > 3)
+    {
+        <div>You have @Items.Count items!</div>
+    }
+</div>
+
